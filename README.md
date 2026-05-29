@@ -2,11 +2,13 @@
 
 Portable **Agent skill** + CLI for generating hand-drawn China travel-route maps as PNG files. It uses [`sketch-map-sdk`](https://www.npmjs.com/package/sketch-map-sdk) for rendering and works with agents that can load `SKILL.md`-style instructions and run local commands.
 
-![Cursor skill demo](./assets/cursor-skill-demo.gif)
+## Demo
+
+![Generate sketch map skill demo](./assets/cursor-skill-demo.gif)
 
 ## What It Does
 
-This skill helps a coding agent turn a route request into a hand-drawn map of mainland China. The generated PNG can include:
+This skill helps a agent turn a route request into a hand-drawn map. The generated PNG can include:
 
 - province watercolor washes
 - rivers through the selected cities
