@@ -39,7 +39,7 @@ pnpm exec tsx bin/render-sketch-map.ts --input examples/sample-route.json --outp
 cat route.json | pnpm exec tsx bin/render-sketch-map.ts --output /tmp/route.png
 ```
 
-**Cursor discovery:** copy or symlink this folder to `<project>/.cursor/skills/generate-sketch-map/` (or install via your team's skill distribution). Geo data ships inside `sketch-map-sdk`; no separate `geo/*.json` copy is required for normal use.
+**Install:** copy or symlink this folder into your coding agent’s skill path (for example `<project>/.cursor/skills/generate-sketch-map/` where applicable, or whatever your tool documents). Geo data ships inside `sketch-map-sdk`; no separate `geo/*.json` copy is required for normal use.
 
 ### Input JSON schema
 

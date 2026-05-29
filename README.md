@@ -1,8 +1,8 @@
 # sketch-map-skill
 
-Cursor Agent Skill + CLI to render hand-drawn China route maps (PNG) via [`sketch-map-sdk`](https://www.npmjs.com/package/sketch-map-sdk).
+Portable **coding-agent skill** + CLI to render hand-drawn China route maps (PNG) via [`sketch-map-sdk`](https://www.npmjs.com/package/sketch-map-sdk). Works with any agent that loads `SKILL.md`-style instructions and can run the CLI.
 
-**Install as a skill:** clone this repo into your project `.cursor/skills/generate-sketch-map/` (or symlink), then `pnpm install` in that folder. See `SKILL.md` for behavior and input schema.
+**Install as a skill:** copy or symlink this repo into your agent’s skill directory (for example `.cursor/skills/generate-sketch-map/` where supported), then `pnpm install` in that folder. See `SKILL.md` for behavior and input schema.
 
 ## Prerequisites
 
