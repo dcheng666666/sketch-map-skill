@@ -24,19 +24,14 @@ From this repository root (after clone), install once:
 pnpm install
 ```
 
-The CLI uses **`sketch-map-sdk`** on npm (Node-side render path; includes geo data and PNG rasterization).
-
-Node **20+** is required (same as `sketch-map-sdk` engines).
+Node **20+** is required.
 
 ## Usage
 
 Run the CLI from this repository root (reads route JSON, writes PNG; summary on stdout):
 
 ```bash
-pnpm exec tsx bin/render-sketch-map.ts --input examples/sample-route.json --output /tmp/route.png
-
-# from stdin
-cat route.json | pnpm exec tsx bin/render-sketch-map.ts --output /tmp/route.png
+cat input-route.json | pnpm exec tsx bin/render-sketch-map.ts --output /tmp/route.png
 ```
 
 **Install:** copy or symlink this folder into your coding agent’s skill path (for example `<project>/.cursor/skills/generate-sketch-map/` where applicable, or whatever your tool documents). Geo data ships inside `sketch-map-sdk`; no separate `geo/*.json` copy is required for normal use.
@@ -69,20 +64,15 @@ The PNG is rasterized at 2x the SVG viewBox size.
 
 ### stdout summary
 
-After a successful render, stdout contains a JSON object useful for follow-up reasoning:
+After a completed render, stdout contains a JSON object useful for follow-up reasoning:
 
 ```json
 {
   "output": "/abs/path/route.png",
-  "title": "...",
-  "locationCount": 2,
-  "matchedCities": ["武汉市", "青岛市"],
-  "matchedProvinces": ["湖北省", "山东省"],
-  "riverCount": 3,
-  "riverNames": ["长江", "汉水", "..."],
-  "unmatchedLocations": [],
-  "bbox": [minLng, minLat, maxLng, maxLat],
-  "pngSize": { "width": 1600, "height": 1200, "bytes": 234567 }
+  "status": "ok",
+  "message": "Rendered 5 locations to png.",
+  "locationCount": 5,
+  "unmatchedLocations": []
 }
 ```
 
@@ -108,7 +98,4 @@ pnpm run render -- --input examples/sample-route.json --output /tmp/sample.png
 
 ## Troubleshooting
 
-- **`Cannot find module ...`** — Run `pnpm install` in this package. Ensure `sketch-map-sdk` resolves (pinned version in `package.json`).
 - **`unmatchedLocations` non-empty** — Coordinates are outside mainland China polygons (often `lat`/`lng` swapped). Fix the input and re-run.
-- **`Resvg` install fails** — `@resvg/resvg-js` is a native binding; ensure your Node version matches a supported prebuilt binary, or rebuild from source.
-- **Chinese characters render as boxes** — The renderer uses a `Caveat, ZCOOL KuaiLe, cursive` font stack. Install a CJK fallback font on the system if needed (resvg falls back to the OS font set).
