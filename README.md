@@ -6,6 +6,10 @@ Portable **Agent skill** + CLI for generating hand-drawn China travel-route maps
 
 ![Generate sketch map skill demo](./assets/cursor-skill-demo.gif)
 
+## Try in the browser
+
+The companion **[sketch-map-app](https://github.com/dcheng666666/sketch-map-app)** SPA is published on **GitHub Pages**: open **[sketch-map-app (live)](https://dcheng666666.github.io/sketch-map-app/)** to search places, reorder stops, preview the map, and download a PNG without installing this repo. Append **`#sample`** to the URL (for example [`…/sketch-map-app/#sample`](https://dcheng666666.github.io/sketch-map-app/#sample)) to load the bundled example route.
+
 ## What It Does
 
 This skill helps a agent turn a route request into a hand-drawn map. The generated PNG can include:
