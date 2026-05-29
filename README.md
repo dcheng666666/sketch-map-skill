@@ -8,7 +8,7 @@ Portable **Agent skill** + CLI for generating hand-drawn China travel-route maps
 
 ## Try in the browser
 
-The companion **[sketch-map-app](https://github.com/dcheng666666/sketch-map-app)** SPA is published on **GitHub Pages**: open **[sketch-map-app (live)](https://dcheng666666.github.io/sketch-map-app/)** to search places, reorder stops, preview the map, and download a PNG without installing this repo. Append **`#sample`** to the URL (for example [`…/sketch-map-app/#sample`](https://dcheng666666.github.io/sketch-map-app/#sample)) to load the bundled example route.
+The companion **[sketch-map-app](https://github.com/dcheng666666/sketch-map-app)** SPA is published on GitHub Pages—open the **[live site](https://dcheng666666.github.io/sketch-map-app/)** to search places, reorder stops, preview the map, and download a PNG without installing this repo. Use the **[bundled sample route](https://dcheng666666.github.io/sketch-map-app/#sample)** to load a fixture instantly.
 
 ## What It Does
 
